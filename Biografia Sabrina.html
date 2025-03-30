@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biografia de Sabrina</title>
+    <title>Biografía de Sabrina</title>
     <link rel="stylesheet" href="StyleSabri.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+<script>
+    let index = 0;
+
+    function moveSlide(step) {
+        const carousel = document.querySelector('.carousel');
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+
+        index += step;
+        
+        // Si se pasa del último, vuelve al primero
+        if (index >= totalImages) {
+            index = 0;
+        }
+        
+        // Si se pasa del primero hacia atrás, vuelve al último
+        if (index < 0) {
+            index = totalImages - 1;
+        }
+
+        carousel.style.transform = `translateX(${-index * 600}px)`;
+    }
+</script>
 
 <body>
     <div class="bio-container">
@@ -25,29 +49,68 @@
             <p>
                 Mi objetivo es especializarme en ciberseguridad e informática forense, porque proteger la información en
                 la era digital es como ser una detective en un mundo lleno de datos. 🕵️‍♀️🔐
-                Además, sueño con ser una freelancer internacional y trabajar en empresas como Google o LinkedIn. 🚀✨
+                Además, sueño con hacer una especialización en la <strong>Universidad NTNU de Noruega</strong> y en la
+                <strong>ETH de Zúrich</strong>, dos de las mejores universidades tecnológicas del mundo. 🚀✨
             </p>
+            <p>Eth de Zurich</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.8221852909464!2d8.545053075759167!3d47.376388871169624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa0a6516e8cf7%3A0x4b61f428b6377607!2sEth%20de%20Zurich!5e0!3m2!1ses!2spe!4v1743300616451!5m2!1ses!2spe"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>NTNU Universidad Noruega de Ciencia y Tecnología </p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.26394555252!2d10.397380486869332!3d63.41948712567623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x466d31bfd8c0937f%3A0xb4fde91ca281978b!2sUniversidad%20Noruega%20de%20Ciencia%20y%20Tecnolog%C3%ADa!5e0!3m2!1ses!2spe!4v1743300742247!5m2!1ses!2spe"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             <p>
                 🗺️ ¿Sabías que ya he visitado 21 países? Cada uno me ha enseñado algo nuevo y ha reforzado mi amor por
-                los idiomas (hablo inglés e italiano y estoy aprendiendo alemán, coreano, trato de aprender chino y
-                noruego).
+                los idiomas. Hablo inglés e italiano y estoy aprendiendo alemán, coreano, trato de aprender chino y
+                noruego.
                 También amo los animales y la tecnología, y creo que ambos pueden coexistir en un mundo más sostenible.
                 🌱🐧
             </p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="viaje1.jpeg" alt="viaje1">
+                    <img src="viaje2.jpeg" alt="viaje2">
+                    <img src="viaje3.jpeg" alt="viaje3">
+                    <img src="viaje4.jpeg" alt="viaje4">
+                    <img src="viaje5.jpeg" alt="viaje5">
+                    <img src="viaje6.jpeg" alt="viaje6">
+                    <img src="viaje7.jpeg" alt="viaje7">
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>            
+            
+            <p>
+                Uno de mis mayores sueños es <strong>vivir en Suiza</strong> en el futuro. Me encanta su calidad de
+                vida,
+                su enfoque en la innovación y el equilibrio entre naturaleza y tecnología. Me veo trabajando en una
+                empresa
+                tecnológica en Zúrich o incluso desarrollando proyectos propios en el campo de la ciberseguridad. ✨
+            </p>
+            <div class="single-image-container">
+                <div class="single-image">
+                    <img src="suiza.jpg" alt="Suiza">
+                </div>
+            </div>
+            
             <p>
                 Soy organizada, puntual y líder por naturaleza, me encanta aprender cosas nuevas y adaptarme a cualquier
-                desafío. 💡
-                Si tienes un reto interesante, ¡cuenta conmigo para enfrentarlo con creatividad y determinación! 🚀✨
+                desafío. 💡 Si tienes un reto interesante, ¡cuenta conmigo para enfrentarlo con creatividad y
+                determinación! 🚀✨
             </p>
         </div>
     </div>
+
     <div>
-        <p>Aquí dejaré una de mis canciones favoritas:</p>
+        <p>Aquí dejo una de mis canciones favoritas:</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/VAYytVatxnk?si=T5HJpZ8ENeMp_ZDc"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>    
+    </div>
 </body>
 
 </html>
