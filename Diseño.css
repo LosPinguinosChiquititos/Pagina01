@@ -51,6 +51,14 @@ header {
     height: 100%;
     object-fit: cover;
 }
+.team img {
+    width: 160px;  /* Ajusta el tamaño según necesites */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Opcional: bordes redondeados para mejor estética */
+    display: block; /* Asegura que la imagen se alinee correctamente */
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+}
+
 
 .team-member h3 {
     background-color: #005f6b;
